@@ -63,9 +63,27 @@ public class Loops {
 		for (int i = num1; i < num2; i++) {
 			range ++;		
 		}
-		return range;
+		
 
-	   
-	}
 
+	int oddNumbers = 0;
+	int evenNumbers = 0;
+	// count odd and even numbers
+    	
+	for (int i = num1; i < num2; i++){
+		// if number % 2 is zero it is even number, count them
+		if (i % 2 == 0){
+			evenNumbers += i +' ';
+		// else count odd numbers 
+		} else {
+			oddNumbers += i + ' ';
+		}
+	} 
+ 	// if range is even number print them, or print odd numbers
+	if (range % 2 == 0){
+		return evenNumbers;
+	} else {
+		return oddNumbers;
+}
+}
 }

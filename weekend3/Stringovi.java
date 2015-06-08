@@ -1,6 +1,5 @@
 package ba.bitcamp.edvin.weekend3;
 
-
 import java.util.Scanner;
 
 public class Stringovi {
@@ -11,6 +10,7 @@ public class Stringovi {
 		String str2 = in.next();
 
 		mixedStrings(str1, str2);
+		sameLetters(str1, str2);
 		printSecondString(str1, str2);
 	}
 
@@ -25,6 +25,26 @@ public class Stringovi {
 			}
 		}
 		System.out.println();
+	}
+
+	public static boolean sameLetters(String s1, String s2) {
+
+		int counter = 0;
+
+		for (int i = 0; i < s1.length(); i++) {
+			for (int j = 0; j < s2.length(); j++) {
+				if (s1.charAt(i) == s2.charAt(j)) {
+					counter++;
+					break;
+				}
+			}
+		}
+
+		if (counter == s1.length()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public static void printSecondString(String s1, String s2) {
