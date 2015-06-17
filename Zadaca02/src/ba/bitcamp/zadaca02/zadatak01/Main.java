@@ -6,9 +6,11 @@ public class Main {
 	
 		Temperature t1 = new Temperature(0);
 		t1.setTemperature(25);
-		t1.getFarenheit();
-		t1.getKelvin();
-		t1.getCelsisus();
+		
+		System.out.println(t1.getTemperatureInC());
+		System.out.println(t1.getTemperatureInF());
+		System.out.println(t1.getTemperatureInK());
+		
 	}
 	
 }

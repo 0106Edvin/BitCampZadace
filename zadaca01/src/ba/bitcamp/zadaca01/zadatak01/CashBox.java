@@ -41,23 +41,21 @@ public class CashBox {
 	/**
 	 * Calculates how much money does user have
 	 * 
-	 * @return the amount of money expressed in words "not much" , "some",
+	 * @return the amount of money expressed in words "not much", "some",
 	 *         "a lot of"
 	 */
 	public String printInformation() {
 
 		if (currentSum == 0) {
-			return "It is empty !";
+			return "It is empty!";
 		} else if (currentSum <= 20) {
 			return "There is some, but not much money!";
 
-		} else if (currentSum >= 21 && currentSum <= 100) {
-			return "There is some money !";
+		} else if (currentSum <= 100) {
+			return "There is some money!";
 
-		} else if (currentSum >= 101) {
-			return "There is a lot of money !";
+		}  
+		return "There is a lot of money!";
 
-		}
-		return null;
 	}
 }

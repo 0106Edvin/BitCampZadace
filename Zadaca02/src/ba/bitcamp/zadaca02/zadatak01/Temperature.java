@@ -12,29 +12,29 @@ public class Temperature {
 	/**
 	 * Prints temperature in celsius
 	 */
-	public void getCelsisus() {
-
-		System.out.println("Temperature in celsius: " + celsius);
+	public double getTemperatureInC() {
+		return celsius;
 	}
+
 	/**
 	 * Prints temperature in kelvin, by adding 273,15 on celsius
 	 */
-	public void getKelvin() {
-		double kelvin;
-		kelvin = 273.15 + celsius;
-		System.out.println("Temperature in kelvin: " + kelvin);
+	public double getTemperatureInK() {
+		return celsius + 273.15;
 	}
+
 	/**
 	 * Prints temperature in farenheit by adding 32 on celsius
 	 */
-	public void getFarenheit() {
-		double farenheit;
-		farenheit = celsius + 32;
-		System.out.println("Temperature in farenheit: " + farenheit);
+	public double getTemperatureInF() {
+		return celsius + 32;
 	}
+
 	/**
 	 * Gives opportunity to set the temperature
-	 * @param num temperature
+	 * 
+	 * @param num
+	 *            temperature
 	 * @return temperature in celsius
 	 */
 	public double setTemperature(int num) {

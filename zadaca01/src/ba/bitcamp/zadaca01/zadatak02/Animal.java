@@ -49,14 +49,14 @@ public class Animal {
 	public void animalStatus() {
 		if (timeOfDay == active && thirsty <= amountOfWater) {
 			System.out
-					.println("It’s fine. The animal is active and has water.");
-		} else if (timeOfDay == active && thirsty != amountOfWater) {
+					.println("It's fine. The animal is active and has water.");
+		} else if (timeOfDay == active && thirsty >= amountOfWater) {
 			System.out
 					.println("The animal is active, but does not have enough water.");
 		} else if (timeOfDay != active && thirsty <= amountOfWater) {
 			System.out
 					.println("The animal is not active, but has enough water.");
-		} else if (timeOfDay != active && thirsty != amountOfWater) {
+		} else  {
 			System.out
 					.println("The animal is not active and it does not have enough water");
 		}
@@ -68,11 +68,10 @@ public class Animal {
 	public static void cycleDayNight() {
 		if (timeOfDay == 1) {
 			timeOfDay = 2;
-		} else if (timeOfDay == 2) {
-
+		} else 
 			timeOfDay = 1;
 		}
-	}
+	
 
 	/**
 	 * Changes the amount of water in habitat which have impact on animal status
