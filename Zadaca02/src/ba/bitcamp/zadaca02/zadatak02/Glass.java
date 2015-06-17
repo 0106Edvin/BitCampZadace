@@ -11,6 +11,7 @@ public class Glass {
 		this.amount = 0;
 		this.maximum = 1;
 	}
+
 	/**
 	 * 
 	 * @return type of liquid
@@ -20,6 +21,7 @@ public class Glass {
 		return type;
 
 	}
+
 	/**
 	 * 
 	 * @return maximum capacity
@@ -27,8 +29,10 @@ public class Glass {
 	public double getMaxCapacity() {
 		return maximum;
 	}
+
 	/**
-	 * Calculates current capacity 
+	 * Calculates current capacity
+	 * 
 	 * @return current capacity
 	 */
 	public double getCurrentCapacity() {
@@ -36,22 +40,27 @@ public class Glass {
 		capacity += amount;
 		return capacity;
 	}
+
 	/**
-	 * Adds liquid in glass
-	 * If glass is empty just add liquid
-	 * If glass is not empty but liquid is the same type, add liquid
-	 * If glass is not empty and liquid is not the same type do nothing
-	 * @param s type of liquid
-	 * @param num amount of liquid
+	 * Adds liquid in glass If glass is empty just add liquid If glass is not
+	 * empty but liquid is the same type, add liquid If glass is not empty and
+	 * liquid is not the same type do nothing If there is more liquid than glass
+	 * capacity, just fill capacity
+	 * 
+	 * @param s
+	 *            type of liquid
+	 * @param num
+	 *            amount of liquid
 	 */
 	public void addLiquid(String s, double num) {
 
 		if (type == null) {
+			type = s;
 			if (amount + num <= maximum) {
 				amount += num;
-				type = s;
 			} else
 				amount = maximum;
+
 		} else if (type.equals(s)) {
 			if (amount + num <= maximum) {
 				amount += num;
@@ -60,6 +69,7 @@ public class Glass {
 		}
 
 	}
+
 	/**
 	 * Remove all liquid from glass
 	 */

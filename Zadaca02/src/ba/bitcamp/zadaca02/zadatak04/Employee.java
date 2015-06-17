@@ -3,48 +3,66 @@ package ba.bitcamp.zadaca02.zadatak04;
 public class Employee {
 
 	private String name;
-	private String maleOrFemale;
+	private String gender;
 	private double salary;
 
 	/**
 	 * Creating constructor
-	 * @param name name of employee
-	 * @param maleOrFemale is employee male or female
-	 * @param salary employee salary
+	 * 
+	 * @param name
+	 *            name of employee
+	 * @param maleOrFemale
+	 *            is employee male or female
+	 * @param salary
+	 *            employee salary
 	 */
-	public Employee(String name, String maleOrFemale, double salary) {
+	public Employee(String name, String gender, double salary) {
 		this.name = name;
-		this.maleOrFemale = maleOrFemale;
+		this.gender = gender;
 		this.salary = salary;
 	}
+
 	/**
-	 * Getter for name
+	 * Returns employee name
+	 * 
 	 * @return name of employee
 	 */
 	public String getName() {
 		return name;
 	}
+
 	/**
-	 * Getter for male or female
+	 * Returns if employee is male or female
+	 * 
 	 * @return male or female
 	 */
 	public String getmaleOrFemale() {
-		return maleOrFemale;
+		return gender;
 	}
+
 	/**
-	 * Getter for salary
+	 * Returns month salary
+	 * 
 	 * @return salary
 	 */
 
 	public double getSalary() {
 		return salary;
 	}
+
 	/**
-	 * Setter for salary
-	 * @param salary sets salary
+	 * Allows user to set month salary
+	 * 
+	 * @param salary
+	 *            sets salary
 	 */
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
 
+	public String toString() {
+		return String
+				.format("Name of employee: %s\nEmployee gender: %s\nEmployee salary: %.2f\n",
+						name, gender, salary);
+	}
 }

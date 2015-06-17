@@ -29,9 +29,9 @@ public class Main {
 		/**
 		 * Testing
 		 */
-		System.out.println("There is " + c1.employeesInCompany(e) + " employees in company");
+		System.out.println("There are " + c1.employeesInCompany(e) + " employees in company");
 		System.out.println("Total earnings of all employees is " + c1.sumSalary(e));
-		System.out.println("There is " +c1.womensInCompany(e) + " women in company");
+		System.out.println("There are " +c1.womensInCompany(e) + " women in company");
 		
 		System.out.println();
 		
@@ -41,6 +41,9 @@ public class Main {
 		System.out.println();
 		
 		System.out.println(c1);
+		
+		System.out.println();
+		System.out.println(e1);
 	}
 
 }

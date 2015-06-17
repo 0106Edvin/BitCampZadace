@@ -17,20 +17,22 @@ public class Main {
 		 * Adds 10 papers, 10 ink and print status
 		 * 
 		 */
-		p2.addPaper(30);
-		p2.addInk(9);
+		p1.addPaper(9);
+		p1.addInk(27);
+		System.out.println(p1);
+		p1.printPages(50);
+		System.out.println(p1);
+		
+		System.out.println();
+		p2.addPaper(7);
+		p2.addInk(59);
 		System.out.println(p2);
-		p2.printPages(3);
+		p2.printPages(58);
 		System.out.println(p2);
 		
 
 		System.out.println();
 
-		p1.addPaper(50);
-		p1.addInk(18);
-		System.out.println(p1);
-		p1.printPages(3);
-		System.out.println(p1);
 		/**
 		 * Prints sum of all pages printer ever printed
 		 */

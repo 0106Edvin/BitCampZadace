@@ -8,9 +8,13 @@ public class Company {
 
 	/**
 	 * Creates constructor
-	 * @param name name of company
-	 * @param manager manager of company
-	 * @param employees employees in company
+	 * 
+	 * @param name
+	 *            name of company
+	 * @param manager
+	 *            manager of company
+	 * @param employees
+	 *            employees in company
 	 */
 	public Company(String name, Employee manager, Employee[] employees) {
 		this.name = name;
@@ -19,34 +23,37 @@ public class Company {
 	}
 
 	/**
-	 * Calculates how many employees works in company
-	 * @param e array of employees 
-	 * @return number of employees who work in company
+	 * Calculates how many employees works in company. Manager is not in
+	 * employee array, even he works in company
+	 * 
+	 * @param e
+	 *            array of employees
+	 * @return number of employees in company
 	 */
 	public int employeesInCompany(Employee[] e) {
-		int counter = 0;
-		for (int i = 0; i < e.length; i++) {
-
-			counter++;
-		}
-		return counter;
+		return e.length;
 	}
+
 	/**
 	 * Calculates sum of all salaries in company
-	 * @param e array of employees, which salaries are caluclated
+	 * 
+	 * @param e
+	 *            array of employees, which salaries are calculated
 	 * @return total earnings in company
 	 */
 	public double sumSalary(Employee[] e) {
-		int sum = 0;
+		double sum = 0;
 		for (int i = 0; i < e.length; i++) {
 			sum += e[i].getSalary();
-
 		}
 		return sum;
 	}
+
 	/**
 	 * Calculates how many women works in company
-	 * @param e	array of employees 
+	 * 
+	 * @param e
+	 *            array of employees
 	 * @return number of women in company
 	 */
 	public int womensInCompany(Employee[] e) {
@@ -58,10 +65,14 @@ public class Company {
 		}
 		return women;
 	}
+
 	/**
 	 * Raise salary of every employee for some amount
-	 * @param e array of employees
-	 * @param raise amount of money salary is raised
+	 * 
+	 * @param e
+	 *            array of employees
+	 * @param raise
+	 *            amount of money salary is raised
 	 */
 
 	public void raiseSallary(Employee[] e, double raise) {
@@ -72,10 +83,10 @@ public class Company {
 
 	public String toString() {
 		String s = "";
-		
+
 		s += "Company name: " + name + "\n";
 		s += "Manager name: " + manager.getName() + "\n";
 		s += "Number of employees: " + employees.length;
 		return s;
- 	} 
+	}
 }
